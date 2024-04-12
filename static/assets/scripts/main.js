@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Ads
   if (localStorage.getItem('ad') === null || localStorage.getItem('ad') === 'default') {
-    localStorage.setItem('ad', 'on')
+    localStorage.setItem('ad', 'off')
   }
 
   var advDiv = document.getElementById('adv')
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     script.src = '//oysterscoldtiny.com/1c/c3/8a/1cc38a6899fdf8ba4dfe779bcc54627b.js'
     advDiv.appendChild(script)
     console.log('Script inserted inside the adv div.')
-  } else if (advDiv && localStorage.getItem('ad') === 'off') {
+  } else if (advDiv && localStorage.getItem('ad') === 'on') {
     advDiv.remove()
     console.log('The adv div has been removed.')
   }
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // Key
 document.addEventListener('DOMContentLoaded', function () {
   var eventKey = localStorage.getItem('eventKey') || '`'
-  var pLink = localStorage.getItem('pLink') || 'https://classroom.google.com/'
+  var pLink = localStorage.getItem('pLink') || 'https://google.com/'
 
   document.addEventListener('keydown', function (event) {
     if (event.key === eventKey) {
