@@ -79,11 +79,12 @@ function pinContains(i, p) {
 function Custom(app) {
   const title = prompt('Enter title for the app:')
   const link = prompt('Enter link for the app:')
-  if (title && link) {
+  const image = prompt('Enter link for the app image:')
+  if (title && link && image) {
     const customApp = {
       name: '[Custom] ' + title,
       link: link,
-      image: '/assets/media/icons/custom.webp',
+      image: image,
       custom: false,
     }
 
