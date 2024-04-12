@@ -66,6 +66,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     name.textContent = 'My Drive - Google Drive'
     localStorage.setItem('name', 'My Drive - Google Drive')
     localStorage.setItem('icon', '/assets/media/favicon/drive.png')
+  } else if (selectedValue === 'Youtube') {
+    icon.setAttribute('href', '/assets/media/favicon/youtube.png')
+    name.textContent = 'Youtube'
+    localStorage.setItem('name', 'My Drive - Google Drive')
+    localStorage.setItem('icon', '/assets/media/favicon/drive.png')
   } else if (selectedValue === 'Classroom') {
     icon.setAttribute('href', '/assets/media/favicon/classroom.png')
     name.textContent = 'Home'
